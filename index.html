@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机点菜器</title>
+
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    }
+
+    button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    }
+
+    #dish {
+    margin-top: 20px;
+    font-size: 24px;
+    }
+    </style>
+
+</head>
+<body>
+<h1>随机点菜器</h1>
+<button id="randomDishButton">给我来份菜</button>
+<p id="dish"></p>
+
+<script>
+    document.getElementById('randomDishButton').addEventListener('click', function() {
+        var dishes = [
+            "猪肉粥",
+            "煲汤",
+            "土豆泥拌粉",
+            "桂林米粉",
+            "老友粉",
+            "麻辣烫",
+            "凉皮",
+            "快餐",
+            "鸡公煲",
+            "卷筒粉",
+            "酸辣粉",
+            "重庆小面",
+            "螺蛳粉",
+            "乌冬面",
+            "烧鸡",
+            "石锅",
+            "抽到我，就别犹豫了",
+            "Yes",
+            "No",
+            "Just do it",
+            "新疆炒米粉",
+            "炒粉",
+            "炒饭",
+            "台湾卤肉饭",
+            "牛杂",
+            "奶茶",
+            "水果"
+        ];
+
+        var randomDish = dishes[Math.floor(Math.random() * dishes.length)];
+        document.getElementById('dish').innerText = "今天为您推荐：" + randomDish;
+    });
+</script>
+</body>
+</html>
