@@ -27,7 +27,7 @@
 </head>
 <body>
 <h1>今天吃啥</h1>
-<button id="randomDishButton">我要吃</button>
+<button id="randomDishButton">点我</button>
 <p id="dish"></p>
 
 <script>
@@ -75,7 +75,7 @@
         ];
 
         var randomDish = dishes[Math.floor(Math.random() * dishes.length)];
-        document.getElementById('dish').innerText = "那就吃：" + randomDish;
+        document.getElementById('dish').innerText = "那就：" + randomDish;
     });
 </script>
 </body>
